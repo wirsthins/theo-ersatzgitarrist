@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theo — Ersatzgitarrist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #111111;
+    --black: #111111;
+    --paper: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--black);
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-style: italic;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 32px 18px 60px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .rule {
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0;
+    font-weight: 700;
+    line-height: 1.4;
+    user-select: none;
+  }
+
+  .rule::before {
+    content: "--------------------------------------------------------------------------------------------------";
+  }
+
+  .rule-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    font-weight: 700;
+  }
+
+  .rule-label .dash {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .rule-label .dash::before {
+    content: "--------------------------------------------------------------------------------------------------";
+  }
+
+  .rule-label span.text {
+    flex-shrink: 0;
+  }
+
+  .rule-label.red span.text {
+    color: var(--red);
+  }
+
+  .rule-label.right {
+    justify-content: flex-end;
+  }
+
+  header {
+    margin-bottom: 4px;
+  }
+
+  header .rule-label .text {
+    padding: 0 2px;
+  }
+
+  .hero {
+    text-align: center;
+    margin: 56px 0 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 7vw, 40px);
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  .hero .year {
+    font-size: clamp(28px, 7vw, 40px);
+    font-weight: 700;
+    margin: 0 0 28px;
+  }
+
+  .hero .tag {
+    font-size: clamp(20px, 5.5vw, 28px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 30px;
+  }
+
+  .status-line {
+    font-size: clamp(17px, 4.6vw, 21px);
+    margin: 0 0 6px;
+  }
+
+  .status-line .red {
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  .stars {
+    text-align: center;
+    margin: 34px 0;
+    font-size: 20px;
+    letter-spacing: 10px;
+  }
+
+  section.block {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  section.block h2 {
+    font-size: clamp(18px, 4.8vw, 22px);
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: none;
+  }
+
+  section.block p, section.block a {
+    font-size: clamp(16px, 4.4vw, 19px);
+    margin: 0;
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  section.block p.black {
+    color: var(--black);
+    font-weight: 400;
+  }
+
+  .whatsapp {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 26px;
+    border: 2px dashed var(--red);
+    color: var(--red) !important;
+    font-weight: 700;
+    font-size: clamp(17px, 4.8vw, 20px);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .whatsapp:hover, .whatsapp:focus-visible {
+    background: var(--red);
+    color: var(--paper) !important;
+    outline: none;
+  }
+
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  footer .contact {
+    margin: 18px 0;
+  }
+
+  footer .contact a {
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  footer .contact a:hover {
+    color: var(--red);
+  }
+
+  footer .copyright {
+    margin-top: 26px;
+    font-size: 14px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <div class="rule"></div>
+    <div class="rule-label"><span class="text">--- theo</span><span class="dash"></span></div>
+    <div class="rule"></div>
+    <div class="rule"></div>
+    <div class="rule-label red right">
+      <span class="dash"></span>
+      <a href="https://wa.me/491632125942" class="text" style="text-decoration:none; color: var(--red);">whatsapp schreiben</a>
+      <span class="text">---</span>
+    </div>
+    <div class="rule"></div>
+  </header>
+
+  <div class="hero">
+    <h1>theo</h1>
+    <div class="year">ersatzgitarrist</div>
+
+    <div class="status-line"><span class="red">sofort verfügbar</span></div>
+    <div class="status-line">flexibel einsetzbar</div>
+    <div class="status-line">ab <span class="red">50€ / h</span></div>
+  </div>
+
+  <div class="stars">* &nbsp; * &nbsp; *</div>
+
+  <section class="block">
+    <h2>instrumente</h2>
+    <p class="black">e-gitarre, akustikgitarre, bass</p>
+  </section>
+
+  <section class="block">
+    <h2>antwortzeit</h2>
+    <p class="black">innerhalb 1 stunde</p>
+  </section>
+
+  <div class="stars">* &nbsp; * &nbsp; *</div>
+
+  <section class="block">
+    <h2>kontakt</h2>
+    <a class="whatsapp" href="https://wa.me/491632125942">whatsapp: +49 163 2125942</a>
+  </section>
+
+  <footer>
+    <div class="rule"></div>
+    <div class="rule"></div>
+    <div class="copyright">theo — gitarre</div>
+  </footer>
+
+</main>
+</body>
+</html>
